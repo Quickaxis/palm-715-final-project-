@@ -1060,17 +1060,27 @@
     #carousel-room-4 {
       height: 400px !important;
       border-bottom: none;
+      overflow: hidden;
+      /* Added overflow hidden to wrapper */
     }
 
     #carousel-room-4 .carousel-inner {
       display: flex;
       width: 100%;
+      transition: transform 0.3s ease;
+      /* Set ease transition */
     }
 
     #carousel-room-4 .carousel-item {
       flex: 0 0 100%;
       width: 100%;
+      min-width: 100%;
+      /* Ensure full width */
       height: 100%;
+      box-sizing: border-box;
+      /* Set box-sizing */
+      margin: 0;
+      padding: 0;
     }
 
     #carousel-room-4 .carousel-item img {
