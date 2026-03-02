@@ -240,6 +240,19 @@
       color: var(--green);
     }
 
+    .mobile-heading {
+      display: none;
+    }
+
+    .highlights-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100%;
+    }
+
     .highlights {
       background: var(--green);
       padding: 40px 60px;
@@ -1148,6 +1161,75 @@
       .logo-img {
         height: 40px;
       }
+
+      .mobile-heading {
+        display: block;
+        text-align: center;
+        font-variant: small-caps;
+        color: #f5f5dc;
+        letter-spacing: 0.2em;
+        font-size: 13px;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(245, 245, 220, 0.4);
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 500;
+        grid-column: 1 / -1;
+      }
+
+      .highlights {
+        padding: 40px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .highlights-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 10px 15px;
+        gap: 15px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .highlights-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .highlight-item {
+        flex: 0 0 140px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px 10px;
+        border-radius: 8px;
+        box-sizing: border-box;
+      }
+
+      .highlight-icon {
+        font-size: 24px;
+        margin: 0 auto 5px auto;
+        display: block;
+      }
+
+      .highlight-text h4 {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .highlight-text p {
+        font-size: 12px;
+        line-height: 1.4;
+      }
     }
 
     /* Gallery Placeholders */
@@ -1449,39 +1531,42 @@
   </section>
 
   <div class="highlights">
-    <div class="highlight-item">
-      <div class="highlight-icon">🔑</div>
-      <div class="highlight-text">
-        <h4>Self Check-In</h4>
-        <p>Lockbox — arrive anytime</p>
+    <div class="mobile-heading">PALM 715</div>
+    <div class="highlights-container">
+      <div class="highlight-item">
+        <div class="highlight-icon">🔑</div>
+        <div class="highlight-text">
+          <h4>Self Check-In</h4>
+          <p>Lockbox — arrive anytime</p>
+        </div>
       </div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">📐</div>
-      <div class="highlight-text">
-        <h4>Extra Spacious</h4>
-        <p>High ceilings, generous rooms</p>
+      <div class="highlight-item">
+        <div class="highlight-icon">📐</div>
+        <div class="highlight-text">
+          <h4>Extra Spacious</h4>
+          <p>High ceilings, generous rooms</p>
+        </div>
       </div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">🌿</div>
-      <div class="highlight-text">
-        <h4>Garden View</h4>
-        <p>Lush green lawns & flowers</p>
+      <div class="highlight-item">
+        <div class="highlight-icon">🌿</div>
+        <div class="highlight-text">
+          <h4>Garden View</h4>
+          <p>Lush green lawns & flowers</p>
+        </div>
       </div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">🐾</div>
-      <div class="highlight-text">
-        <h4>Pet Friendly</h4>
-        <p>Bring your furry friends</p>
+      <div class="highlight-item">
+        <div class="highlight-icon">🐾</div>
+        <div class="highlight-text">
+          <h4>Pet Friendly</h4>
+          <p>Bring your furry friends</p>
+        </div>
       </div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">📶</div>
-      <div class="highlight-text">
-        <h4>High-Speed WiFi</h4>
-        <p>Stay connected all day</p>
+      <div class="highlight-item">
+        <div class="highlight-icon">📶</div>
+        <div class="highlight-text">
+          <h4>High-Speed WiFi</h4>
+          <p>Stay connected all day</p>
+        </div>
       </div>
     </div>
   </div>
