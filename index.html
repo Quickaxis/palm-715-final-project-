@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Palm 715 — Homestay Jorhat</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
   <style>
     :root {
@@ -78,6 +78,21 @@
       font-weight: 600;
       color: var(--green);
       letter-spacing: 0.5px;
+    }
+
+    .nav-logo-brand {
+      font-family: 'Jost', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #1B4332;
+    }
+
+    @media (max-width: 768px) {
+      .nav-logo-brand {
+        font-size: 14px;
+      }
     }
 
     .nav-links {
@@ -1540,6 +1555,7 @@
   <nav>
     <a href="#" class="nav-logo">
       <img src="palm%20715%20data/palm715logo.jpg" alt="Palm 715 Logo" class="logo-img">
+      <span class="nav-logo-brand">PALM 715</span>
     </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
