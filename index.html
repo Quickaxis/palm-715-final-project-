@@ -1964,7 +1964,7 @@
             quiet getaway.</p>
           <div class="room-price">Starts from ₹1,800/- per night</div>
           <div class="room-note">Garden, bonfire & barbecue area included</div>
-          <button class="submit-btn" onclick="sendWhatsApp()">Book Now</button>
+          <button class="submit-btn" onclick="sendWhatsApp('1BHK Vintage Unit')">Book Now</button>
         </div>
       </div>
 
@@ -2014,7 +2014,7 @@
           <p>An elevated experience with premium furnishings and modern amenities in a timeless vintage setting.</p>
           <div class="room-price">Starts from ₹2,500/- per night</div>
           <div class="room-note">Garden, bonfire & barbecue area included</div>
-          <button class="submit-btn" onclick="sendWhatsApp()">Book Now</button>
+          <button class="submit-btn" onclick="sendWhatsApp('1BHK Luxury Unit')">Book Now</button>
         </div>
       </div>
 
@@ -2063,7 +2063,7 @@
             bond.</p>
           <div class="room-price">Starts from ₹2,800/- per night</div>
           <div class="room-note">Garden, bonfire & barbecue area included</div>
-          <button class="submit-btn" onclick="sendWhatsApp()">Book Now</button>
+          <button class="submit-btn" onclick="sendWhatsApp('2BHK Vintage Unit')">Book Now</button>
         </div>
       </div>
 
@@ -2585,14 +2585,15 @@
     function scrollToContact() {
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     }
-    function sendWhatsApp() {
+    function sendWhatsApp(unitName) {
       const name = document.getElementById('guestName').value || 'Guest';
       const phone = document.getElementById('guestPhone').value || '';
       const checkin = document.getElementById('formCheckin').value || 'TBD';
       const checkout = document.getElementById('formCheckout').value || 'TBD';
       const guests = document.getElementById('guestCount').value;
       const msg = document.getElementById('guestMsg').value || '';
-      const text = encodeURIComponent(`Hi Palm 715! I'd like to book a stay.\nName: ${name}\nPhone: ${phone}\nCheck-in: ${checkin}\nCheck-out: ${checkout}\nGuests: ${guests}\nMessage: ${msg}`);
+      const unitLine = unitName ? `Unit Requested: ${unitName}\n` : '';
+      const text = encodeURIComponent(`Hi Palm 715! I'd like to book a stay.\n${unitLine}Name: ${name}\nPhone: ${phone}\nCheck-in: ${checkin}\nCheck-out: ${checkout}\nGuests: ${guests}\nMessage: ${msg}`);
       window.open(`https://wa.me/918296503375?text=${text}`, '_blank');
     }
 
